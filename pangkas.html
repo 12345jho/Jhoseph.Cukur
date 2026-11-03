@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pangkas Jhoseph Luahambowo 💈 | Lapangan Kasus 10, Hambobo</title>
+    <meta name="description"
+        content="Pangkas Jhoseph Luahambowo — Jl. Desa Hiligeho No. 30. Harga terjangkau, hasil memuaskan!">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --emas: #d4a017;
+            --gelap: #1a1a1a;
+            --coklat: #2c2c2c;
+            --putih: #f8f8f8;
+            --merah: #dc2626;
+        }
+
+        body {
+            background-color: var(--gelap);
+            color: var(--putih);
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom: 4px solid var(--emas);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--emas);
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+
+        .quotes {
+            background: var(--coklat);
+            padding: 30px 25px;
+            margin: 30px auto;
+            max-width: 800px;
+            border-radius: 8px;
+            border: 2px solid var(--emas);
+            text-align: center;
+        }
+
+        .quotes p {
+            font-size: 1.15rem;
+            margin: 12px 0;
+            font-style: italic;
+        }
+
+        .quotes .larangan {
+            color: #ff6b6b;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 15px;
+        }
+
+        .kontainer {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 40px;
+        }
+
+        .info-lokasi {
+            background: var(--coklat);
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--emas);
+        }
+
+        .info-lokasi h2 {
+            color: var(--emas);
+            margin-bottom: 12px;
+        }
+
+        .info-lokasi p {
+            margin: 6px 0;
+            font-size: 1.05rem;
+        }
+
+        .info-lokasi .wa {
+            color: #25d366;
+            font-weight: bold;
+        }
+
+        .daftar-harga {
+            background: var(--coklat);
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            border: 1px solid #444;
+        }
+
+        .daftar-harga h2 {
+            color: var(--emas);
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.6rem;
+        }
+
+        .daftar-harga table {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        .daftar-harga td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #444;
+            font-size: 1.05rem;
+        }
+
+        .daftar-harga td:last-child {
+            text-align: right;
+            font-weight: bold;
+            color: #4ade80;
+        }
+
+        .cari {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .cari input {
+            padding: 12px 20px;
+            width: 100%;
+            max-width: 400px;
+            font-size: 1rem;
+            border: 2px solid var(--emas);
+            border-radius: 5px;
+            background: var(--coklat);
+            color: var(--putih);
+        }
+
+        h2.heading-model {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--emas);
+        }
+
+        .grid-model {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .kartu-model {
+            background: var(--coklat);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #444;
+        }
+
+        .kartu-model:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(212, 160, 23, 0.2);
+            border-color: var(--emas);
+
+        }
+
+        .kartu-model img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: #444;
+        }
+
+        .kartu-model .isi {
+            padding: 18px;
+            text-align: center;
+        }
+
+        .kartu-model h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--emas);
+        }
+
+        .kartu-model .harga {
+            font-size: 1.1rem;
+            color: #4ade80;
+            margin-bottom: 15px;
+        }
+
+        .btn-book {
+            display: inline-block;
+            background: #25d366;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .btn-book:hover {
+            background: #1fb858;
+        }
+
+        footer {
+            background: #111;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+            border-top: 2px solid var(--emas);
+        }
+
+        footer p {
+            color: #777;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .grid-model {
+                grid-template-columns: 1fr;
+            }
+
+            .daftar-harga {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>💈 PANGKAS JHOSEPH LUAHAMBOWO 💈</h1>
+        <p>📍 Desa Hiligeho,No.30 </p>
+    </header>
+    <div class="quotes">
+        <p>✨ <em>"Duduk santai, pulang ganteng"</em> ✨</p>
+        <p>⚡ <em>"Jika mau cepat, jangan minta bagus</em><br>
+            <em>Jika mau bagus, jangan minta cepat"</em> ⚡
+        </p>
+        <p class="larangan">🚫 "Bon sangat tidak dilayani" 🚫</p>
+    </div>
+    <div class="kontainer">
+        <div class="info-lokasi">
+            <h2>📍 Info & Kontak</h2>
+            <p><strong>Nama Usaha:</strong> Pangkas JHOSEPH LUAHAMBOWO</p>
+            <p><strong>Alamat:</strong> Desa Hiligeho,No.30</p>
+            <p class="wa"><strong>📱 WhatsApp:</strong> 0822-4922-8115</p>
+        </div>
+        <div class="daftar-harga">
+            <h2>💰 Daftar Harga</h2>
+            <table>
+                <tr>
+                    <td>Dewasa</td>
+                    <td>Rp 10.000</td>
+                </tr>
+                <tr>
+                    <td>Remaja</td>
+                    <td>Rp 10.000</td>
+                </tr>
+                <tr>
+                    <td>Botak Licin</td>
+                    <td>Rp 15.000</td>
+                </tr>
+                <tr>
+                    <td>Anak-anak & Bayi</td>
+                    <td>Rp 8.000</td>
+                </tr>
+                <tr>
+                    <td>Datang ke Rumah</td>
+                    <td>Rp 15.000</td>
+                </tr>
+                <tr>
+                    <td>Cukur Jenggot + Kumis</td>
+                    <td>Rp 5.000</td>
+                </tr>
+                <tr>
+                    <td>Datang ke Rumah + Botak Licin</td>
+                    <td>Rp 20.000</td>
+                </tr>
+            </table>
+        </div>
+        <div class="cari">
+            <input type="text" id="cari" placeholder="🔍 Cari model rambut..." onkeyup="cariModel()">
+        </div>
+        <h2 class="heading-model">✂️ Pilih Model Rambut</h2>
+        <div class="grid-model" id="daftar-model">
+            <!-- Model 1 -->
+            <div class="kartu-model">
+                <img src="IMG_d06e4ed4-c69a-4b62-bf2c-f80087b9b106.jpg" alt="Taper Fade">
+                <div class="isi">
+                    <h3>Taper Fade</h3>
+                    <div class="harga">Sesuai Daftar Harga</div>
+                    <a href="https://wa.me/6282249228115?text=Halo%20Bang%20Joseph%2C%20saya%20mau%20booking%20potong%20rambut%20model%20Taper%20Fade.%20Terima%20kasih."
+                        target="_blank" class="btn-book">
+                        ✅ Booking via WA
+                    </a>
+                </div>
+            </div>
+            <!-- Model 2 -->
+            <div class="kartu-model">
+                <img src="IMG_a991327c-ed7f-420b-a437-ee52996efb45.jpg" alt="Low Fade">
+                <div class="isi">
+                    <h3>Low Fade</h3>
+                    <div class="harga">Sesuai Daftar Harga</div>
+                    <a href="https://wa.me/6282249228115?text=Halo%20Bang%20Joseph%2C%20saya%20mau%20booking%20potong%20rambut%20model%20Low%20Fade.%20Terima%20kasih."
+                        target="_blank" class="btn-book">
+                        ✅ Booking via WA
+                    </a>
+                </div>
+            </div>
+            <!-- Model 3 -->
+            <div class="kartu-model">
+                <img src="IMG_6670afec-be3d-4738-b309-b503fb4500e4.jpg" alt="High Fade">
+                <div class="isi">
+                    <h3>High Fade</h3>
+                    <div class="harga">Sesuai Daftar Harga</div>
+                    <a href="https://wa.me/6282249228115?text=Halo%20Bang%20Joseph%2C%20saya%20mau%20booking%20potong%20rambut%20model%20High%20Fade.%20Terima%20kasih."
+                        target="_blank" class="btn-book">
+                        ✅ Booking via WA
+                    </a>
+                </div>
+            </div>
+            <!-- Model 4 -->
+            <div class="kartu-model">
+                <img src="IMG_b67ff379-3323-47e7-9940-7191b40ea614.jpg" alt="Pompadour">
+                <div class="isi">
+                    <h3>Pompadour</h3>
+                    <div class="harga">Sesuai Daftar Harga</div>
+                    <a href="https://wa.me/6282249228115?text=Halo%20Bang%20Joseph%2C%20saya%20mau%20booking%20potong%20rambut%20model%20Pompadour.%20Terima%20kasih."
+                        target="_blank" class="btn-book">
+                        ✅ Booking via WA
+                    </a>
+                </div>
+            </div>
+            <!-- Model 5 -->
+            <div class="kartu-model">
+                <img src="IMG_58dc0b01-a05d-428a-aea3-c758c213155f.jpg" alt="Undercut">
+                <div class="isi">
+                    <h3>Undercut</h3>
+                    <div class="harga">Sesuai Daftar Harga</div>
+                    <a href="https://wa.me/6282249228115?text=Halo%20Bang%20Joseph%2C%20saya%20mau%20booking%20potong%20rambut%20model%20Undercut.%20Terima%20kasih."
+                        target="_blank" class="btn-book">
+                        ✅ Booking via WA
+                    </a>
+                </div>
+            </div>
+            <!-- Model 6 -->
+            <div class="kartu-model">
+                <img src="IMG_4abb555b-3bf3-418c-85ee-53c26eb1d558.jpg" alt="Crew Cut">
+                <div class="isi">
+                    <h3>Crew Cut</h3>
+                    <div class="harga">Sesuai Daftar Harga</div>
+                    <a href="https://wa.me/6282249228115?text=Halo%20Bang%20Joseph%2C%20saya%20mau%20booking%20potong%20rambut%20model%20Crew%20Cut.%20Terima%20kasih."
+                        target="_blank" class="btn-book">
+                        ✅ Booking via WA
+                    </a>
+                </div>
+            </div>
+            <!-- Model 7 -->
+            <div class="kartu-model">
+                <img src="IMG_1fc72ebc-0efb-47fc-b5e6-a64659e9b21d.jpg" alt="Buzz Cut">
+                <div class="isi">
+                    <h3>Buzz Cut</h3>
+                    <div class="harga">Sesuai Daftar Harga</div>
+                    <a href="https://wa.me/6282249228115?text=Halo%20Bang%20Joseph%2C%20saya%20mau%20booking%20potong%20rambut%20model%20Buzz%20Cut.%20Terima%20kasih."
+                        target="_blank" class="btn-book">
+                        ✅ Booking via WA
+                    </a>
+                </div>
+            </div>
+            <!-- Model 8 -->
+            <div class="kartu-model">
+                <img src="IMG_ef324cd7-9aa7-499c-9079-9a7f48e70e0d.jpg" alt="Quiff">
+                <div class="isi">
+                    <h3>Quiff</h3>
+                    <div class="harga">Sesuai Daftar Harga</div>
+                    <a href="https://wa.me/6282249228115?text=Halo%20Bang%20Joseph%2C%20saya%20mau%20booking%20potong%20rambut%20model%20Quiff.%20Terima%20kasih."
+                        target="_blank" class="btn-book">
+                        ✅ Booking via WA
+                    </a>
+                </div>
+            </div>
+            <!-- Model 9 -->
+            <div class="kartu-model">
+                <img src="Screenshot (353).png" alt="Side Part">
+                <div class="isi">
+                    <h3>Side Part</h3>
+                    <div class="harga">Sesuai Daftar Harga</div>
+                    <a href="https://wa.me/6282249228115?text=Halo%20Bang%20Joseph%2C%20saya%20mau%20booking%20potong%20rambut%20model%20Side%20Part.%20Terima%20kasih."
+                        target="_blank" class="btn-book">
+                        ✅ Booking via WA
+                    </a>
+                </div>
+            </div>
+            <!-- Model 10 -->
+            <div class="kartu-model">
+                <img src="IMG_3c6be133-727f-4ed5-a175-58a0cfaef59e.jpg" alt="Mullet">
+                <div class="isi">
+                    <h3>Mullet</h3>
+                    <div class="harga">Sesuai Daftar Harga</div>
+                    <a href="https://wa.me/6282249228115?text=Halo%20Bang%20Joseph%2C%20saya%20mau%20booking%20potong%20rambut%20model%20Mullet.%20Terima%20kasih."
+                        target="_blank" class="btn-book">
+                        ✅ Booking via WA
+                    </a>
+                </div>
+            </div>
+            <!-- Model 11 -->
+            <div class="kartu-model">
+                <img src="IMG_739c760c-0df0-466c-9210-f46e2837a5c9.jpg" alt="Mohawk">
+                <div class="isi">
+                    <h3>Mohawk</h3>
+                    <div class="harga">Sesuai Daftar Harga</div>
+                    <a href="https://wa.me/6282249228115?text=Halo%20Bang%20Joseph%2C%20saya%20mau%20booking%20potong%20rambut%20model%20Mohawk.%20Terima%20kasih."
+                        target="_blank" class="btn-book">
+                        ✅ Booking via WA
+                    </a>
+                </div>
+            </div>
+            <!-- Model 12 -->
+            <div class="kartu-model">
+                <img src="IMG_40d7d07f-adf1-4da3-b67b-ee3fee836940.jpg" alt="Faux Hawk">
+                <div class="isi">
+                    <h3>2 Jari</h3>
+                    <div class="harga">Sesuai Daftar Harga</div>
+                    <a href="https://wa.me/6282249228115?text=Halo%20Bang%20Joseph%2C%20saya%20mau%20booking%20potong%20rambut%20model%20Faux%20Hawk.%20Terima%20kasih."
+                        target="_blank" class="btn-book">
+                        ✅ Booking via WA
+                    </a>
+                </div>
+            </div>
+            <!-- Model 13 -->
+            <div class="kartu-model">
+                <img src="IMG_fe8c9f1c-5865-4ce4-bb58-dc9566213d8f.jpg" alt="Textured Crop">
+                <div class="isi">
+                    <h3>Francrop</h3>
+                    <div class="harga">Sesuai Daftar Harga</div>
+                    <a href="https://wa.me/6282249228115?text=Halo%20Bang%20Joseph%2C%20saya%20mau%20booking%20potong%20rambut%20model%20Faux%20Hawk.%20Terima%20kasih."
+                        target="_blank" class="btn-book">
+                        ✅ Booking via WA
+                    </a>
+                </div>
+            </div>
+            <!-- Model 14 -->
+            <div class="kartu-model">
+                <img src="67a45e89d0caa227968e773875563e59.png" alt="Textured Crop">
+                <div class="isi">
+                    <h3>Skill 1</h3>
+                    <div class="harga">Sesuai Daftar Harga</div>
+                    <a href="https://wa.me/6282249228115?text=Halo%20Bang%20Joseph%2C%20saya%20mau%20booking%20potong%20rambut%20model%20Faux%20Hawk.%20Terima%20kasih."
+                        target="_blank" class="btn-book">
+                        ✅ Booking via WA
+                    </a>
+                </div>
+            </div>
+            <!-- Model 15 -->
+            <div class="kartu-model">
+                <img src="208cea439ba3f1cdf0874477a0c030ac.png" alt="Textured Crop">
+                <div class="isi">
+                    <h3>Skill 2</h3>
+                    <div class="harga">Sesuai Daftar Harga</div>
+                    <a href="https://wa.me/6282249228115?text=Halo%20Bang%20Joseph%2C%20saya%20mau%20booking%20potong%20rambut%20model%20Faux%20Hawk.%20Terima%20kasih."
+                        target="_blank" class="btn-book">
+                        ✅ Booking via WA
+                    </a>
+                </div>
+            </div>
+            <!-- Model 16 -->
+            <div class="kartu-model">
+                <img src="60164476fd84f7459c5af3154cb11113.png" alt="Textured Crop">
+                <div class="isi">
+                    <h3>Skill 3</h3>
+                    <div class="harga">Sesuai Daftar Harga</div>
+                    <a href="https://wa.me/6282249228115?text=Halo%20Bang%20Joseph%2C%20saya%20mau%20booking%20potong%20rambut%20model%20Faux%20Hawk.%20Terima%20kasih."
+                        target="_blank" class="btn-book">
+                        ✅ Booking via WA
+                    </a>
+                </div>
+            </div>
+            <!-- Model 17 -->
+            <div class="kartu-model">
+                <img src="1745073085788.jpg" alt="Textured Crop">
+                <div class="isi">
+                    <h3>Skill 4</h3>
+                    <div class="harga">Sesuai Daftar Harga</div>
+                    <a href="https://wa.me/6282249228115?text=Halo%20Bang%20Joseph%2C%20saya%20mau%20booking%20potong%20rambut%20model%20Faux%20Hawk.%20Terima%20kasih."
+                        target="_blank" class="btn-book">
+                        ✅ Booking via WA
+                    </a>
+                </div>
+            </div>
+            <!-- Model 18 -->
+            <div class="kartu-model">
+                <img src="1745073284694.jpg" alt="Textured Crop">
+                <div class="isi">
+                    <h3>Skill 5</h3>
+                    <div class="harga">Sesuai Daftar Harga</div>
+                    <a href="https://wa.me/6282249228115?text=Halo%20Bang%20Joseph%2C%20saya%20mau%20booking%20potong%20rambut%20model%20Faux%20Hawk.%20Terima%20kasih."
+                        target="_blank" class="btn-book">
+                        ✅ Booking via WA
+                    </a>
+                </div>
+            </div>
+            <!-- Model 19 -->
+            <div class="kartu-model">
+                <img src="1747831863936.jpg" alt="Textured Crop">
+                <div class="isi">
+                    <h3>Skill 6</h3>
+                    <div class="harga">Sesuai Daftar Harga</div>
+                    <a href="https://wa.me/6282249228115?text=Halo%20Bang%20Joseph%2C%20saya%20mau%20booking%20potong%20rambut%20model%20Faux%20Hawk.%20Terima%20kasih."
+                        target="_blank" class="btn-book">
+                        ✅ Booking via WA
+                    </a>
+                </div>
+            </div>
+            <!-- Model 20 -->
+            <div class="kartu-model">
+                <img src="1776217228620.jpg" alt="Textured Crop">
+                <div class="isi">
+                    <h3>Skill 7</h3>
+                    <div class="harga">Sesuai Daftar Harga</div>
+                    <a href="https://wa.me/6282249228115?text=Halo%20Bang%20Joseph%2C%20saya%20mau%20booking%20potong%20rambut%20model%20Faux%20Hawk.%20Terima%20kasih."
+                        target="_blank" class="btn-book">
+                        ✅ Booking via WA
+                    </a>
+                </div>
+            </div>
+            <!-- Model 21 -->
+            <div class="kartu-model">
+                <img src="1777284406280.jpg" alt="Textured Crop">
+                <div class="isi">
+                    <h3>Skill 8</h3>
+                    <div class="harga">Sesuai Daftar Harga</div>
+                    <a href="https://wa.me/6282249228115?text=Halo%20Bang%20Joseph%2C%20saya%20mau%20booking%20potong%20rambut%20model%20Faux%20Hawk.%20Terima%20kasih."
+                        target="_blank" class="btn-book">
+                        ✅ Booking via WA
+                    </a>
+                </div>
+            </div>
+            <!-- Model 22 -->
+            <div class="kartu-model">
+                <img src="1777693542609.jpg" alt="Textured Crop">
+                <div class="isi">
+                    <h3>Skill 9</h3>
+                    <div class="harga">Sesuai Daftar Harga</div>
+                    <a href="https://wa.me/6282249228115?text=Halo%20Bang%20Joseph%2C%20saya%20mau%20booking%20potong%20rambut%20model%20Faux%20Hawk.%20Terima%20kasih."
+                        target="_blank" class="btn-book">
+                        ✅ Booking via WA
+                    </a>
+                </div>
+            </div>
+            <!-- Model 23 -->
+            <div class="kartu-model">
+                <img src="Screenshot_2024-07-16-20-44-59-51_f69139cffc4d135a71392e13634f144a.jpg" alt="Textured Crop">
+                <div class="isi">
+                    <h3>Skill 10</h3>
+                    <div class="harga">Sesuai Daftar Harga</div>
+                    <a href="https://wa.me/6282249228115?text=Halo%20Bang%20Joseph%2C%20saya%20mau%20booking%20potong%20rambut%20model%20Faux%20Hawk.%20Terima%20kasih."
+                        target="_blank" class="btn-book">
+                        ✅ Booking via WA
+                    </a>
+                </div>
+            </div>
+            <!-- Model 24 -->
+            <div class="kartu-model">
+                <img src="Screenshot_2025-04-21-07-22-52-79_f598e1360c96b5a5aa16536c303cff92.jpg" alt="Textured Crop">
+                <div class="isi">
+                    <h3>Skill 11</h3>
+                    <div class="harga">Sesuai Daftar Harga</div>
+                    <a href="https://wa.me/6282249228115?text=Halo%20Bang%20Joseph%2C%20saya%20mau%20booking%20potong%20rambut%20model%20Faux%20Hawk.%20Terima%20kasih."
+                        target="_blank" class="btn-book">
+                        ✅ Booking via WA
